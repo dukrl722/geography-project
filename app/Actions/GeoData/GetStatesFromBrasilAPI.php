@@ -6,7 +6,6 @@ namespace App\Actions\GeoData;
 
 use App\Services\BrasilAPI\Facades\BrasilAPI;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
 
 class GetStatesFromBrasilAPI
 {

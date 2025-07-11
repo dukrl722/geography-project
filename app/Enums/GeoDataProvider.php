@@ -6,6 +6,6 @@ namespace App\Enums;
 
 enum GeoDataProvider: string
 {
-    CASE BRASIL_API = 'brasil_api';
-    CASE IBGE = 'ibge';
+    case BRASIL_API = 'brasil_api';
+    case IBGE = 'ibge';
 }

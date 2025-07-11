@@ -29,7 +29,7 @@ class Cities
         return $this;
     }
 
-    public function json(): null | array
+    public function json(): ?array
     {
         return $this->response->json();
     }

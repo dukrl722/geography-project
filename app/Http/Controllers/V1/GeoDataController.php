@@ -9,9 +9,6 @@ use App\Actions\GeoData\GetStatesFromIbgeAPI;
 use App\Enums\GeoDataProvider;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\V1\StatesResource;
-use App\Services\BrasilAPI\Facades\BrasilAPI;
-use App\Services\IBGE\Facades\IBGE;
-use Illuminate\Http\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 class GeoDataController extends Controller
