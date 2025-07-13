@@ -32,10 +32,12 @@ it('should return a list of states when brasil api is set as provider', function
     $this->getJson(route('v1.state.cities.index', ['code' => 'pr']))
         ->assertOk()
         ->assertJsonStructure([
-            'data' => [
-                '*' => [
-                    'name',
-                    'ibge_code',
+            [
+                'data' => [
+                    '*' => [
+                        'name',
+                        'ibge_code',
+                    ],
                 ],
             ],
         ]);
@@ -70,10 +72,12 @@ it('should return a list of states when ibge api is set as provider', function (
     $this->getJson(route('v1.state.cities.index', ['code' => 'pr']))
         ->assertOk()
         ->assertJsonStructure([
-            'data' => [
-                '*' => [
-                    'name',
-                    'ibge_code',
+            [
+                'data' => [
+                    '*' => [
+                        'name',
+                        'ibge_code',
+                    ],
                 ],
             ],
         ]);
