@@ -3,7 +3,6 @@
 declare(strict_types = 1);
 
 use App\Enums\GeoDataProvider;
-use Illuminate\Http\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 beforeEach(function (): void {
@@ -14,14 +13,8 @@ beforeEach(function (): void {
 it('should return a list of states when brasil api is set as provider', function (): void {
     Http::fake([
         $this->brasilApiUrl => Http::response([
-            [
-                'nome' => 'name 1',
-                'codigo_ibge' => 1234567,
-            ],
-            [
-                'nome' => 'name 2',
-                'codigo_ibge' => 1234568,
-            ],
+            ['nome' => 'name 1', 'codigo_ibge' => 1234567],
+            ['nome' => 'name 2', 'codigo_ibge' => 1234568],
         ])
     ]);
 
