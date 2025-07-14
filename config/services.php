@@ -35,4 +35,13 @@ return [
         ],
     ],
 
+    'geo_data' => [
+        'selected' => env('GEO_DATA_SELECTED', 'ibge'),
+        'ibge' => [
+            'base_url' => env('IBGE_BASE_URL', 'https://servicodados.ibge.gov.br/api/v1'),
+        ],
+        'brasil_api' => [
+            'base_url' => env('BRASIL_API_BASE_URL', 'https://brasilapi.com.br/api'),
+        ],
+    ],
 ];
