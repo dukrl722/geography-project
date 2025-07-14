@@ -84,6 +84,6 @@ it('should return a message when provided code is incorrect', function (): void 
     $this->getJson(route('v1.state.cities.index', ['code' => 'A']))
         ->assertNotFound()
         ->assertJson([
-            'message' => 'No data found for the provided code.',
+            'message' => __('messages.geo_data.not_found'),
         ]);
 });

@@ -26,7 +26,7 @@ class GeoDataController extends Controller
 
         if ($data && $data->count() === 0) {
             return response()->json([
-                'message' => 'No data found for the provided code.',
+                'message' => __('messages.geo_data.not_found'),
             ], Response::HTTP_NOT_FOUND);
         }
 

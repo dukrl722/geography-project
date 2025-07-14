@@ -7,55 +7,60 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Geography Project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Generic project to test geography features in Laravel (nothing special).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Laravel 12
+- PHP 8.4
+- No database (maybe in the future)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Onboarding
 
-## Learning Laravel
+Let's start your onboarding process with the following steps:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1- Clone the repository
+```bash'
+git clone cloneurlhere (sorry, I'm too lazy to write it)
+```
+2- Install the PHP dependencies
+```bash
+composer install
+```
+3- Create .env file
+```bash
+cp .env.example .env
+```
+4- Generate the APP_KEY
+```bash
+php artisan key:generate
+```
+Or if you are using Laravel Sail:
+```bash
+vendor/bin/sail artisan key:generate
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Documentation
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Yes, we have documentation! You can find it in route `/api/documentation` (Thanks Swagger creators!)
 
-## Laravel Sponsors
+### Task Pattern
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+To keep a simple pattern for tasks, we will use the following structure:
 
-### Premium Partners
+```php
+'feature/' // when we are working on a new feature
+'enhancement/' // when we are improving an existing feature
+'bugfix/' // when we are fixing a bug
+'hotfix/' // when we are fixing a critical bug (probably it will never happen)
+```
+You wanna an example? Here it is:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+```bash
+git checkout -b feature/GPP-{task-count}
+git checkout -b enhancement/GPP-{task-count}
+git checkout -b bugfix/GPP-{task-count}
+git checkout -b hotfix/GPP-{task-count}
+```
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+That's all folks 🙏

@@ -1,0 +1,73 @@
+openapi: 3.0.3
+info:
+  title: Geography Project API
+  version: 1.0.0
+  description: Generic Geography API for listing cities by state code.
+
+servers:
+  - url: http://localhost:8000
+    description: localhost
+
+paths:
+  /api/v1/states/{code}/cities:
+    get:
+      summary: List Cities by State Code
+      description: Return a list with city name and IBGE code for a given state code.
+      tags:
+        - Geography
+      parameters:
+        - name: code
+          in: path
+          description: State code to filter cities (e.g., PR for Paraná)
+          required: true
+          schema:
+            type: string
+            example: PR
+        - name: page
+          in: query
+          description: Page number for pagination
+          required: false
+          schema:
+            type: integer
+            example: 2
+      responses:
+        '200':
+          description: Paginated list of cities for the specified state code
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  current_page:
+                    type: integer
+                    example: 1
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          example: Curitiba
+                        ibge_code:
+                          type: integer
+                          example: 4106902
+                  per_page:
+                    type: integer
+                    example: 15
+                  total:
+                    type: integer
+                    example: 399
+                  last_page:
+                    type: integer
+                    example: 27
+        '404':
+          description: Not found return
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: No data found for the provided code.
